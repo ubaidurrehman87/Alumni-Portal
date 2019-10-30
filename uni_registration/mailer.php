@@ -14,19 +14,15 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP server
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'aualumniportal85@gmail.com';                 // SMTP username
-    $mail->Password = 'Alumniportal1234';                           // SMTP password
+    $mail->Username = 'sendermail@gmail.com';                 // SMTP username
+    $mail->Password = 'senderpassword';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('aualumniportal85@gmail.com', 'AU Alumni Portal');
-    //$mail->addAddress('k164033@nu.edu.pk', 'Akif Hussain');     // Add a recipient
-    $mail->addAddress('K164033@nu.edu.pk', 'Akif Hussain');
-   // $mail->addAddress('ubaidurrehman225786@gmail.com');               // Name is optional
-   // $mail->addReplyTo('no-reply@howcode.org', 'Information');
-   // $mail->addCC('quaideazamfss123@gmail.com');
-  //  $mail->addBCC('bcc@example.com');
+    $mail->setFrom('sender@gmail.com', 'AU Alumni Portal');
+    $mail->addAddress('receiver', '');
+
 
     //Attachments
    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
